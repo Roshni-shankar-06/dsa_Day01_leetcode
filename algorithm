@@ -1,1 +1,14 @@
+1. Create a list containing Roman numeral values and symbols
+   in descending order.
 
+2. Create an empty list called ans.
+
+3. Traverse through every value-symbol pair.
+
+4. While num >= value:
+      a. Subtract value from num.
+      b. Add symbol to ans.
+
+5. Join all symbols in ans.
+
+6. Return the resulting Roman numeral.
