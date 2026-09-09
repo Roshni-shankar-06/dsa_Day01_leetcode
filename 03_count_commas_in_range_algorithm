@@ -1,1 +1,37 @@
+# Algorithm - Count Commas in Range II
 
+## Problem
+
+Given an integer `n`, find the total number of commas used when writing all integers from `1` to `n` in standard number formatting.
+
+A comma is inserted after every three digits from the right.
+
+For example:
+
+- `123` → 0 commas
+- `1,000` → 1 comma
+- `12,345` → 1 comma
+- `1,000,000` → 2 commas
+
+---
+
+## Approach
+
+We use a mathematical approach instead of checking every number individually.
+
+The important observation is that a new comma appears whenever a number reaches a power of `1000`.
+
+The important thresholds are:
+
+- `1000` → first comma
+- `1,000,000` → second comma
+- `1,000,000,000` → third comma
+- `1,000,000,000,000` → fourth comma
+- and so on
+
+For every threshold `x`, all numbers from `x` to `n` contain at least one comma corresponding to that threshold.
+
+The number of such numbers is:
+
+```text
+n - x + 1
